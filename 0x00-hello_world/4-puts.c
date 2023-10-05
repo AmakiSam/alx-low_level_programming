@@ -1,6 +1,9 @@
 #include <stdio.h>
 /**
  * main - main entry point
+ *
+ * Description: 'Your program should end with the value 0'
+ *
  * return: always 0 (success)
  */
 
