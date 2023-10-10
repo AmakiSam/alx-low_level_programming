@@ -18,12 +18,13 @@ int main(void)
 			putchar(z);
 			putchar(w);
 			if (z != '8' || (z == '8' && w != '9'))
-			putchar(',');
-			putchar(' ');
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 		}
 	}
 	putchar('\n');
 	return (0);
 }
-
