@@ -17,7 +17,7 @@ int main(void)
 		{
 			putchar(z);
 			putchar(w);
-			if (z == 89)
+			if (w == 89)
 			{
 				break;
 			}
