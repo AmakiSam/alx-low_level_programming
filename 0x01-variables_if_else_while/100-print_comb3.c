@@ -17,6 +17,10 @@ int main(void)
 		{
 			putchar(z);
 			putchar(w);
+			if (z == 89)
+			{
+				break;
+			}
 
 			if (z != '8' || (z == '8' && w != '9'))
 			putchar(',');
