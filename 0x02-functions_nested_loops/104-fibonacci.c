@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - print Fibonacci number to 98
  * Return: 0
