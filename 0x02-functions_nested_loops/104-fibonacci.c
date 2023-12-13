@@ -12,7 +12,7 @@ int main(void)
 	unsigned long int fib3;
 
 	printf("%lu, %lu, ", fib1, fib2);
-	for (int i = 3; i <= 98; i++)
+	while (int i = 3; i <= 98; i++)
 	{
 		fib3 = fib1 + fib2;
 		printf("%lu", fib3);
