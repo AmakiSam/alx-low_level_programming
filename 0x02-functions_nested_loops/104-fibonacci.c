@@ -17,7 +17,7 @@ int main(void)
 	{
 		fib3 = fib1 + fib2;
 		printf("%lu", fib3);
-		if (i != 98)
+		if (i != 97)
 		{
 			printf(", ");
 		}
