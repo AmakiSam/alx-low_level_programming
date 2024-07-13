@@ -21,7 +21,7 @@ int is_palindrome(char *s)
  * @start: first char
  * @end: last char
  *
- * Retrun: 1 if the string is a palindrome, and 0 if it is not
+ * Return: 1 if string is palindrome, 0 if not
  */
 int is_palindrome_helper(char *start, char *end)
 {
