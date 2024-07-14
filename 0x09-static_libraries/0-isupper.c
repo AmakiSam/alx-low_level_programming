@@ -1,17 +1,15 @@
 #include "main.h"
+
 /**
- * _abs - compute absolute value of an integer
- * @i: integer
- * Return: absolute value
+ * _isupper - checks for uppercase letters
+ * @c: function parameter
+ * Return: 1 on success 0 on failure
  */
 
-int _abs(int i)
+int _isupper(int c)
 {
-	if (i >= 0)
-		return (i);
-	else if (i < 0)
-		return (-i);
-
-	return (0);
-	_putchar('\n');
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
 }
