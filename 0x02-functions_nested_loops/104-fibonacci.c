@@ -1,28 +1,47 @@
 #include <stdio.h>
-/**
-* main - prints the first 98 Fibonacci numbers, starting with 1 and 2
-* Return: 0
-*/
 
+#define MAX_DIGITS 1000
+
+/**
+* main - Entry point
+* Return: Always 0
+*/
 int main(void)
 {
-unsigned long int fib1 = 1;
-unsigned long int fib2 = 2;
-unsigned long int fib3;
+int fib1[MAX_DIGITS] = {0};
+int fib2[MAX_DIGITS] = {0};
+int fib3[MAX_DIGITS] = {0};
+int temp[MAX_DIGITS] = {0};
 int i;
 
-printf("%lu, %lu, ", fib1, fib2);
+fib1[0] = 1;
+fib2[0] = 2;
+
+
+printf("%d, %d", fib1[0], fib2[0]);
+
+
 for (i = 3; i <= 98; i++)
 {
-fib3 = fib1 + fib2;
-printf("%lu", fib3);
-if (i != 98)
+
+int carry = 0;
+for (int j = 0; j < MAX_DIGITS; j++)
 {
-printf(", ");
+int sum = fib1[j] + fib2[j] + carry;
+fib3[j] = sum % 10;
+carry = sum / 10;
 }
-fib1 = fib2;
-fib2 = fib3;
+
+printf(", %d", fib3[MAX_DIGITS - 1]);
+
+for (int j = 0; j < MAX_DIGITS; j++)
+{
+fib1[j] = fib2[j];
+fib2[j] = fib3[j];
 }
+}
+
 printf("\n");
+
 return (0);
 }
