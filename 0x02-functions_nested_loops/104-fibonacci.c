@@ -1,44 +1,28 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
-* _putchar - Custom putchar function
+* main - prints the first 98 Fibonacci numbers, starting with 1 and 2
+* Return: 0
 */
-int _putchar(char c)
-{
-return putchar(c);
-}
 
-/**
-* main - Entry point
-* Return: Always 0
-*/
 int main(void)
 {
-int first = 1, second = 2, next;
+unsigned long int fib1 = 1;
+unsigned long int fib2 = 2;
+unsigned long int fib3;
 int i;
 
-_putchar('1');
-_putchar(',');
-_putchar(' ');
-
-_putchar('2');
-
-for (i = 3; i <= 98; ++i)
+printf("%lu, %lu, ", fib1, fib2);
+for (i = 3; i <= 98; i++)
 {
-next = first + second;
-
-if (i != 98) {
-_putchar(',');
-_putchar(' ');
+fib3 = fib1 + fib2;
+printf("%lu", fib3);
+if (i != 98)
+{
+printf(", ");
 }
-
-printf("%d", next);
-
-first = second;
-second = next;
+fib1 = fib2;
+fib2 = fib3;
 }
-_putchar('\n');
-
+printf("\n");
 return (0);
 }
