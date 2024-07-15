@@ -15,7 +15,7 @@ return putchar(c);
 */
 int main(void)
 {
-unsigned long long int first = 1, second = 2, next;
+int first = 1, second = 2, next;
 int i;
 
 _putchar('1');
@@ -27,9 +27,14 @@ _putchar('2');
 for (i = 3; i <= 98; ++i)
 {
 next = first + second;
+
+if (i != 98) {
 _putchar(',');
 _putchar(' ');
-printf("%llu", next);
+}
+
+printf("%d", next);
+
 first = second;
 second = next;
 }
