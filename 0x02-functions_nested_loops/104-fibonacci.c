@@ -6,26 +6,19 @@
 */
 int main(void)
 {
-	int count;
-	unsigned long int a = 1, b = 2, next;
+	unsigned long int a = 1, b = 2, c, i;
 
-	_putchar('1');
-	_putchar(',');
-	_putchar(' ');
-	_putchar('2');
+	printf("1, 2");
 
-	for (count = 2; count < 98; count++)
+	for (i = 2; i < 98; i++)
 	{
-		next = a + b;
-		_putchar(',');
-		_putchar(' ');
-		printf("%lu", next);
-
+		c = a + b;
+		printf(", %lu", c);
 		a = b;
-		b = next;
+		b = c;
 	}
 
-	_putchar('\n');
+	printf("\n");
 
 	return (0);
 }
